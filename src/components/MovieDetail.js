@@ -52,16 +52,7 @@ function MovieDetail({ movie, onClose, darkMode }) {
 
                 {/* Genre badge */}
                 <span
-                    style={{
-                        display: 'inline-block',
-                        padding: '3px 12px',
-                        borderRadius: '20px',
-                        backgroundColor: '#e94560',
-                        color: '#fff',
-                        fontSize: '12px',
-                        fontWeight: 700,
-                        marginBottom: '12px',
-                    }}
+
                 >
                     {movie.genre}
                 </span>
@@ -73,37 +64,23 @@ function MovieDetail({ movie, onClose, darkMode }) {
 
                 {/* Rating */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '16px' }}>
-                    <span style={{ color: '#f5c518', fontWeight: 700, fontSize: '18px' }}>&#9733; {movie.rating}</span>
+                    <span>&#9733; {movie.rating}</span>
                     <span style={{ color: darkMode ? '#888' : '#999', fontSize: '13px' }}>/10</span>
                 </div>
 
                 {/* Details grid */}
-                <div
-                    style={{
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
-                        gap: '12px',
-                        marginBottom: '20px',
-                        padding: '16px',
-                        borderRadius: '10px',
-                        backgroundColor: darkMode ? '#0f3460' : '#f7f7f7',
-                    }}
-                >
+                <div>
                     <div>
-                        <div style={{ fontSize: '12px', color: darkMode ? '#888' : '#999', marginBottom: '2px' }}>Đạo diễn</div>
-                        <div style={{ fontWeight: 600 }}>{movie.director}</div>
+                        Đạo diễn: {movie.director}
                     </div>
                     <div>
-                        <div style={{ fontSize: '12px', color: darkMode ? '#888' : '#999', marginBottom: '2px' }}>Năm phát hành</div>
-                        <div style={{ fontWeight: 600 }}>{movie.year}</div>
+                        Năm phát hành: {movie.year}
                     </div>
                     <div>
-                        <div style={{ fontSize: '12px', color: darkMode ? '#888' : '#999', marginBottom: '2px' }}>Thời lượng</div>
-                        <div style={{ fontWeight: 600 }}>{movie.duration} phút</div>
+                        Thời lượng: {movie.duration} phút
                     </div>
                     <div>
-                        <div style={{ fontSize: '12px', color: darkMode ? '#888' : '#999', marginBottom: '2px' }}>Thể loại</div>
-                        <div style={{ fontWeight: 600 }}>{movie.genre}</div>
+                        Thể loại: {movie.genre}
                     </div>
                 </div>
 
