@@ -4,7 +4,7 @@ function MovieDetail({ movie, onClose, darkMode }) {
     if (!movie) return null;
 
     return (
-        // Overlay
+
         <div
             onClick={onClose}
             style={{
@@ -17,7 +17,7 @@ function MovieDetail({ movie, onClose, darkMode }) {
                 justifyContent: 'center',
             }}
         >
-            {/* Modal card - stop click propagation */}
+
             <div
                 onClick={e => e.stopPropagation()}
                 style={{
@@ -32,7 +32,7 @@ function MovieDetail({ movie, onClose, darkMode }) {
                     animation: 'fadeIn 0.25s ease',
                 }}
             >
-                {/* Close button */}
+
                 <button
                     onClick={onClose}
                     style={{
@@ -50,25 +50,25 @@ function MovieDetail({ movie, onClose, darkMode }) {
                     ×
                 </button>
 
-                {/* Genre badge */}
+
                 <span
 
                 >
                     {movie.genre}
                 </span>
 
-                {/* Title */}
+
                 <h2 style={{ margin: '0 0 8px 0', fontSize: '24px', fontWeight: 800 }}>
                     {movie.title}
                 </h2>
 
-                {/* Rating */}
+
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '16px' }}>
                     <span>&#9733; {movie.rating}</span>
                     <span style={{ color: darkMode ? '#888' : '#999', fontSize: '13px' }}>/10</span>
                 </div>
 
-                {/* Details grid */}
+
                 <div>
                     <div>
                         Đạo diễn: {movie.director}

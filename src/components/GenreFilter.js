@@ -24,7 +24,6 @@ function GenreFilter({ genre, setGenre, sortOption, setSortOption, darkMode }) {
                 flexWrap: 'wrap',
             }}
         >
-            {/* Genre Filter */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <label style={{ fontWeight: 600, fontSize: '15px' }}>Genre:</label>
                 <select
@@ -38,7 +37,6 @@ function GenreFilter({ genre, setGenre, sortOption, setSortOption, darkMode }) {
                 </select>
             </div>
 
-            {/* Sort by Rating */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <label style={{ fontWeight: 600, fontSize: '15px' }}>Sort by Rating:</label>
                 <select

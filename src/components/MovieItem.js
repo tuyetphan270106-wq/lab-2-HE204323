@@ -17,7 +17,7 @@ function MovieItem({ movie, isFavorite, prefer, detail, darkMode }) {
         >
             {/* Title | Genre | Year | Rating */}
             <span>
-                {movie.title} | {movie.genre} | {movie.year} | {movie.rating}
+                {movie.title} | {movie.genre} | {movie.year} | &#9733; {movie.rating}
             </span>
 
             {/* Buttons */}

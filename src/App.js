@@ -32,7 +32,6 @@ function App() {
 
   const closeDetail = () => setSelectedMovie(null);
 
-  // Filter + search + sort
   let displayedMovies = allMovies.filter(movie => {
     const matchSearch = movie.title.toLowerCase().includes(search.toLowerCase());
     const matchGenre = genre === 'All Genres' || movie.genre === genre;
@@ -62,8 +61,9 @@ function App() {
 
           <GenreFilter genre={genre} setGenre={setGenre} sortOption={sortOption} setSortOption={setSortOption} darkMode={darkMode} />
 
-          <div style={{ textAlign: 'center', padding: '10px 0', fontSize: '15px', fontWeight: 600, color: darkMode ? '#aaa' : '#555' }}>
-            Total Movies: {displayedMovies.length}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', padding: '10px 0', fontSize: '15px', fontWeight: 600, color: darkMode ? '#aaa' : '#555' }}>
+            Total Movies: {displayedMovies.length} |
+            Favorites: {favorites.length}
           </div>
 
           <MovieList
@@ -73,13 +73,69 @@ function App() {
             detail={handleDetail}
             darkMode={darkMode}
           />
+
+          {/* Danh sách phim yêu thích từ localStorage
+          {favorites.length > 0 && (
+            <div style={{
+              marginTop: '30px',
+              padding: '20px',
+              backgroundColor: darkMode ? '#2a2a3e' : '#fff8e1',
+              borderRadius: '10px',
+              border: `2px solid ${darkMode ? '#f5a623' : '#f0c040'}`,
+            }}>
+              <h3 style={{
+                marginBottom: '14px',
+                fontSize: '18px',
+                fontWeight: 700,
+                color: darkMode ? '#f5a623' : '#d48800',
+              }}>
+                ⭐ Phim Yêu Thích ({favorites.length})
+              </h3>
+              {allMovies
+                .filter(m => favorites.includes(m.id))
+                .map(m => (
+                  <div
+                    key={m.id}
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      padding: '10px 14px',
+                      marginBottom: '8px',
+                      backgroundColor: darkMode ? '#333' : '#fffde7',
+                      borderRadius: '6px',
+                      border: `1px solid ${darkMode ? '#555' : '#ffe082'}`,
+                    }}
+                  >
+                    <span>
+                      <strong>{m.title}</strong> | {m.genre} | {m.year} | ⭐ {m.rating}
+                    </span>
+                    <button
+                      onClick={() => toggleFavorite(m.id)}
+                      style={{
+                        cursor: 'pointer',
+                        background: 'none',
+                        border: '1px solid #f5a623',
+                        borderRadius: '4px',
+                        padding: '4px 10px',
+                        color: '#f5a623',
+                        fontWeight: 600,
+                      }}
+                    >
+                      ✕ Bỏ yêu thích
+                    </button>
+                  </div>
+                ))
+              }
+            </div>
+          )} */}
         </div>
 
         {selectedMovie && (
           <MovieDetail movie={selectedMovie} onClose={closeDetail} darkMode={darkMode} />
         )}
       </div>
-    </ThemeContext.Provider>
+    </ThemeContext.Provider >
   );
 }
 
