@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { FiSearch } from 'react-icons/fi';
 
 function SearchBar({ search, setSearch }) {
     const inputRef = useRef();
@@ -19,19 +18,9 @@ function SearchBar({ search, setSearch }) {
             }}
         >
             <label style={{ fontWeight: 600, whiteSpace: 'nowrap', fontSize: '15px' }}>
-                🔍 Search:
+                Search Movie:
             </label>
             <div style={{ position: 'relative', flex: 1 }}>
-                <FiSearch
-                    size={18}
-                    style={{
-                        position: 'absolute',
-                        left: '12px',
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        color: '#999',
-                    }}
-                />
                 <input
                     ref={inputRef}
                     type="text"
@@ -40,7 +29,7 @@ function SearchBar({ search, setSearch }) {
                     onChange={(e) => setSearch(e.target.value)}
                     style={{
                         width: '100%',
-                        padding: '10px 40px 10px 38px',
+                        padding: '10px 36px 10px 12px',
                         fontSize: '15px',
                         border: '1.5px solid #ccc',
                         borderRadius: '8px',
@@ -62,7 +51,7 @@ function SearchBar({ search, setSearch }) {
                             background: 'none',
                             border: 'none',
                             cursor: 'pointer',
-                            fontSize: '18px',
+                            fontSize: '16px',
                             color: '#999',
                         }}
                     >

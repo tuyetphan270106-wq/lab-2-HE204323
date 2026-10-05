@@ -1,6 +1,4 @@
 import React from 'react';
-import { MdClose } from 'react-icons/md';
-import { FaStar } from 'react-icons/fa';
 
 function MovieDetail({ movie, onClose, darkMode }) {
     if (!movie) return null;
@@ -45,11 +43,11 @@ function MovieDetail({ movie, onClose, darkMode }) {
                         border: 'none',
                         cursor: 'pointer',
                         color: darkMode ? '#aaa' : '#666',
-                        display: 'flex',
-                        alignItems: 'center',
+                        fontSize: '22px',
+                        lineHeight: 1,
                     }}
                 >
-                    <MdClose size={24} />
+                    ×
                 </button>
 
                 {/* Genre badge */}
@@ -75,8 +73,7 @@ function MovieDetail({ movie, onClose, darkMode }) {
 
                 {/* Rating */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '16px' }}>
-                    <FaStar color="#f5c518" />
-                    <span style={{ fontWeight: 700, fontSize: '18px' }}>{movie.rating}</span>
+                    <span style={{ color: '#f5c518', fontWeight: 700, fontSize: '18px' }}>&#9733; {movie.rating}</span>
                     <span style={{ color: darkMode ? '#888' : '#999', fontSize: '13px' }}>/10</span>
                 </div>
 

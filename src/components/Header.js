@@ -1,6 +1,5 @@
 import { CiLight } from "react-icons/ci";
 import { MdDarkMode } from "react-icons/md";
-import { MdLocalMovies } from "react-icons/md";
 
 function Header({ darkMode, toggleTheme }) {
     return (
@@ -18,12 +17,9 @@ function Header({ darkMode, toggleTheme }) {
                 zIndex: 100,
             }}
         >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <MdLocalMovies size={32} color={darkMode ? '#e94560' : '#e94560'} />
-                <h1 style={{ margin: 0, fontSize: '24px', fontWeight: 700, color: darkMode ? '#e0e0e0' : '#1a1a2e' }}>
-                    Mini Movie Manager
-                </h1>
-            </div>
+            <h1 style={{ margin: 0, fontSize: '24px', fontWeight: 700, color: darkMode ? '#e0e0e0' : '#1a1a2e' }}>
+                Mini Movie Manager
+            </h1>
 
             <button
                 onClick={toggleTheme}
@@ -42,7 +38,7 @@ function Header({ darkMode, toggleTheme }) {
                     transition: 'all 0.3s',
                 }}
             >
-                {darkMode ? <><CiLight size={18} /> Light Mode</> : <><MdDarkMode size={18} /> Dark Mode</>}
+                {darkMode ? <><CiLight size={18} /> Light</> : <><MdDarkMode size={18} /> Dark</>}
             </button>
         </header>
     );

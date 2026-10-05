@@ -26,7 +26,7 @@ function GenreFilter({ genre, setGenre, sortOption, setSortOption, darkMode }) {
         >
             {/* Genre Filter */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <label style={{ fontWeight: 600, fontSize: '15px' }}>🎬 Genre:</label>
+                <label style={{ fontWeight: 600, fontSize: '15px' }}>Genre:</label>
                 <select
                     value={genre}
                     onChange={(e) => setGenre(e.target.value)}
@@ -40,7 +40,7 @@ function GenreFilter({ genre, setGenre, sortOption, setSortOption, darkMode }) {
 
             {/* Sort by Rating */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <label style={{ fontWeight: 600, fontSize: '15px' }}>⭐ Sort:</label>
+                <label style={{ fontWeight: 600, fontSize: '15px' }}>Sort by Rating:</label>
                 <select
                     value={sortOption}
                     onChange={(e) => setSortOption(e.target.value)}
